@@ -8,9 +8,13 @@
 
     --{ Table of Contents }--
 
+    Universal
     Menu
     Nav
+    Calendar
 */
+
+/* --{ Universal }-- */
 
 :root {
     --main-font-family: DIN;
@@ -23,6 +27,10 @@
 @font-face {
     font-family: DIN;
     src: url(DIN\ Bold.ttf);
+}
+
+main {
+    margin: 5rem;
 }
 
 .bg--primary {
@@ -179,3 +187,5 @@ html, body, ul {
 .uni li:has(a:hover:not(.active)) {
     background-color: var(--primary);
 }
+
+/* --{ Calendar }-- */
