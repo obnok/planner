@@ -1,0 +1,16 @@
+{
+  "name": "code",
+  "productname": "Personal Planner",
+  "version": "1.0.0",
+  "description": "Personal planner application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "David Simon",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^22.1.0",
+    "toastify-js": "^1.12.0"
+  }
+}
