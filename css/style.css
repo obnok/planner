@@ -58,12 +58,12 @@ html, body, ul {
 
 /* --{ Menu }-- */
 
-    .main, .main__nav ul a, .main__right {
+    .main, .main__nav a, .main__right {
         color: var(--text);
         font-family: var(--main-font-family);
     }
 
-    .main__nav ul a {
+    .main__nav a {
         font-size: 1.25rem;
     }
 
@@ -71,7 +71,7 @@ html, body, ul {
         font-size: 4rem;
     }
 
-    .main__right p, .main__right button a {
+    .main__right p, .main__right a {
         font-size: 1.125rem;
     }
 
@@ -104,7 +104,7 @@ html, body, ul {
     margin-top: 50%;
 }
  
-.main__nav ul li {
+.main__nav li {
     display: flex;
     flex-direction: row-reverse;
     margin-right: 3rem;
@@ -112,13 +112,13 @@ html, body, ul {
     padding-bottom: 3px;
 }
 
-.main__nav ul li a {
+.main__nav a {
     margin-top: 3rem;
     margin-left: 18rem;
     text-decoration: none;
 }
 
-.main__nav ul li:hover {
+.main__nav li:hover {
     opacity: 70%;
 }
 
@@ -142,7 +142,7 @@ html, body, ul {
     opacity: 70%;
 }
 
-.main__right button a {
+.main__right a {
     text-decoration: none;
 }
 
@@ -153,38 +153,29 @@ html, body, ul {
     }
 
     a {
-        color: var(--text)
-    }
-
-    .uni > a, .uni > ul > li {
+        color: var(--text);
         font-size: 1.25rem;
     }
 
-.uni > a {
-    margin-left: 2rem;
-}
-
-.uni > ul {
+.uni {
     display: flex;
     flex-direction: end;
 }
 
-.uni > ul > li {
-    padding: 1.5rem;
+.uni li {
     list-style: none;
 }
 
-.uni > ul:first-child {}
-
-.uni > ul > li:last-child {
-    margin-right: 2rem;
-}
-
-.uni > ul > li > a, .uni > a {
+.uni a {
+    display: block;
+    padding: 2rem;
     text-decoration: none;
-    padding-inline: 5px;
 }
 
-.uni > ul > li:has(a:hover:not(.active)) {
+.uni li:first-child {
+    margin-right: auto;
+}
+
+.uni li:has(a:hover:not(.active)) {
     background-color: var(--primary);
 }
