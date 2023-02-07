@@ -1,7 +1,7 @@
 function activeNav() {
     var navItem = document.getElementById('uniNav').children; 
     console.log(document.title)
-    for(let i = 0; i < 6; i++) {
+    for(let i = 0; i <= 5; i++) {
         console.log(navItem[i].firstChild.innerHTML)
         if(document.title == navItem[i].firstChild.innerHTML) {
             navItem[i].style.backgroundColor = '#8b579f';
@@ -30,11 +30,14 @@ function loadNav() {
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
     headerToolbar: {
         left: 'today prev,next',
         center: 'title',
-      initialView: 'dayGridMonth',
-      selectable: true,
+        right: 'dayGridDay,dayGridWeek,dayGridMonth,dayGridYear'
+    },
+    selectable: true,
+    editable: true
     });
     calendar.render();
   });

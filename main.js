@@ -9,7 +9,8 @@ function createMenuWindow() {
         titleBarStyle: 'hidden-inset',
         title: 'Personal Planner',
         width: isDev ? 1920 : 1200,
-        height: 1080
+        height: 1080,
+        autoHideMenuBar: true,
     });
 
     if (isDev) {
@@ -31,12 +32,6 @@ app.whenReady().then(() => {
         }
     })
 })
-
-const menu = [
-    {
-        role: 'fileMenu',
-    }
-]
 
 // If user isn't on Mac, the app quits
 app.on('window-all-closed', () => {
