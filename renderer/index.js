@@ -23,13 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="notes.html">Notes</a></li>
             <li><a href="timers.html">Timers</a></li>
             <li><a href="settings.html">Settings</a></li>
-            </ul>
-        </nav>
-        `;
-    var navItem = document.getElementById('uni').children; 
-    for(let i = 0; i <= 5; i++) {
-        if(document.title == navItem[i].firstChild.innerHTML) {
-            navItem[i].style.backgroundColor = '#8b579f';
-        }
-    }
+        </ul>
+    </nav>
+    `;
+    document.getElementById('loadNav').appendChild(template.content);
+    activeNav();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+    headerToolbar: {
+        left: 'today prev,next',
+        center: 'title',
+      initialView: 'dayGridMonth',
+      selectable: true,
+    });
+    calendar.render();
+  });

@@ -30,7 +30,9 @@
 }
 
 main {
-    margin: 5rem;
+    margin: 3rem auto;
+    width: 80%;
+    font-family: var(--main-font-family);
 }
 
 .bg--primary {
@@ -62,6 +64,10 @@ main {
 
 html, body, ul {
     height: 100%;
+}
+
+menu {
+    color: black;
 }
 
 /* --{ Menu }-- */
@@ -127,7 +133,12 @@ html, body, ul {
 }
 
 .main__nav li:hover {
-    opacity: 70%;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #FF10F0, #CD81EB) 1;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .main__right {
@@ -160,7 +171,7 @@ html, body, ul {
         background-color: var(--secondary);
     }
 
-    a {
+    .uni a {
         color: var(--text);
         font-size: 1.25rem;
     }
