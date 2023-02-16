@@ -11,6 +11,10 @@ function createMenuWindow() {
         width: isDev ? 1920 : 1200,
         height: 1080,
         autoHideMenuBar: true,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
     });
 
     if (isDev) {

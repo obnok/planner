@@ -10,6 +10,7 @@
   "author": "David Simon",
   "license": "MIT",
   "dependencies": {
+    "@editorjs/editorjs": "^2.26.5",
     "electron": "^22.1.0",
     "fullcalendar": "^6.1.1",
     "toastify-js": "^1.12.0"
