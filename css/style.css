@@ -17,6 +17,19 @@
 
 /* --{ Universal }-- */
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, ul {
+    height: 100%;
+}
+
+menu {
+    color: black;
+}
+
 :root {
     --main-font-family: DIN;
     --primary: #8b579f ;
@@ -56,19 +69,6 @@ main {
 .default {
     color: var(--text);
     font-family: var(--main-font-family);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html, body, ul {
-    height: 100%;
-}
-
-menu {
-    color: black;
 }
 
 /* --{ Menu }-- */

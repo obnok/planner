@@ -8,8 +8,8 @@ function createMenuWindow() {
     const mainWindow = new BrowserWindow({
         titleBarStyle: 'hidden-inset',
         title: 'Personal Planner',
-        width: isDev ? 1920 : 1200,
-        height: 1080,
+        width: isDev ? 1200 : 800,
+        height: 600,
         autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true,
@@ -22,6 +22,7 @@ function createMenuWindow() {
     }
 
     mainWindow.loadFile(path.join(__dirname, './renderer/index.html'));
+    mainWindow.maximize();
 }
 
 app.whenReady().then(() => {

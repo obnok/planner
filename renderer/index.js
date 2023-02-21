@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var edit = document.getElementById('nav-bar');
     edit.innerHTML = `
         <nav>
-            <ul id="nav-active" class="uni default">
+            <ul id="nav-active" class="uni default">    
             <li><a href="index.html">Menu</a></li>
             <li><a href="calendar.html">Calendar</a></li>
             <li><a href="tasks.html">Tasks</a></li>
