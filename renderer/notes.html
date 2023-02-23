@@ -11,7 +11,32 @@
 <body">
     <div id="nav-bar"></div>
     <main>
-        <h1>Header!</h1>
+        <div class="text-editor">
+            <div class="text-editor__header">
+                <div class="text-editor__group">
+                    <button type="button" class="text-editor__button" onclick="decrease(this)">-</button>
+                    <input id="font-size" type="number" value="12" min="1" max="100" onchange="resize(this)">
+                    <button type="button" class="text-editor__button" onclick="increase(this)">+</button>
+                </div>
+                <div class="text-editor__group">
+                    <button type="button" class="text-editor__button" onclick="bold(this)"><img src="../css/icons/bold.svg"></button>
+                    <button type="button" class="text-editor__button" onclick="italic(this)"><img src="../css/icons/italic.svg"></button>
+                    <button type="button" class="text-editor__button" onclick="underline(this)"><img src="../css/icons/underline.svg"></button>
+                </div>
+                <div class="text-editor__group">
+                    <button type="button" class="text-editor__button" onclick="left(this)"><img src="../css/icons/text-align-left.svg"></button>
+                    <button type="button" class="text-editor__button" onclick="center(this)"><img src="../css/icons/text-align-center.svg"></button>
+                    <button type="button" class="text-editor__button" onclick="right(this)"><img src="../css/icons/text-align-right.svg"></button>
+                </div>
+                <div class="text-editor__group">
+                    <button type="button" class="text-editor__button" onclick="strikethrough(this)"><img src="../css/icons/strikethrough.svg"></button>
+                    <button type="color" class="text-editor__button" onchange="color(this)"><img src="../css/icons/pallet.svg"></button>
+                </div>
+            </div>
+            <div class="text-editor__body">
+                <textarea placeholder="Your text here " rows="35"></textarea>
+            </div>
+        </div>
     </main>
 </body>
 </html>
