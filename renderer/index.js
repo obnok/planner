@@ -12,7 +12,6 @@
 //   });
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Please');
     var edit = document.getElementById('nav-bar');
     edit.innerHTML = `
         <nav>
@@ -35,9 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
     headerToolbar: {
         left: 'today prev,next',
-        center: 'title',
-      initialView: 'dayGridMonth',
-      selectable: true,
+        center: 'title'
+    },
+    initialView: 'dayGridMonth',
+    selectable: true
     });
     calendar.render();
-  });
+});
