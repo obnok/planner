@@ -8,9 +8,27 @@
 
     --{ Table of Contents }--
 
+    Universal
     Menu
     Nav
+    Calendar
+    Notes
 */
+
+/* --{ Universal }-- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, ul {
+    height: 100%;
+}
+
+menu {
+    color: black;
+}
 
 :root {
     --main-font-family: DIN;
@@ -23,6 +41,12 @@
 @font-face {
     font-family: DIN;
     src: url(DIN\ Bold.ttf);
+}
+
+main {
+    margin: 3rem auto;
+    width: 80%;
+    font-family: var(--main-font-family);
 }
 
 .bg--primary {
@@ -45,15 +69,6 @@
 .default {
     color: var(--text);
     font-family: var(--main-font-family);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html, body, ul {
-    height: 100%;
 }
 
 /* --{ Menu }-- */
@@ -119,7 +134,12 @@ html, body, ul {
 }
 
 .main__nav li:hover {
-    opacity: 70%;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #FF10F0, #CD81EB) 1;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .main__right {
@@ -152,7 +172,7 @@ html, body, ul {
         background-color: var(--secondary);
     }
 
-    a {
+    .uni a {
         color: var(--text);
         font-size: 1.25rem;
     }
@@ -178,4 +198,63 @@ html, body, ul {
 
 .uni li:has(a:hover:not(.active)) {
     background-color: var(--primary);
+}
+
+/* --{ Calendar }-- */
+
+/* --{ Notes }-- */
+
+.text-editor {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-editor__header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--secondary);
+}
+
+input[type=number] {
+    margin: 0;
+    padding-inline: 5px;
+    width: 25px;
+    outline: none;
+    border: none;
+    text-align: center;
+    color: var(--text);
+    background-color: var(--secondary);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.text-editor__button {
+    height: 100%;
+    padding: 10px 16px;
+    border: none;
+    color: var(--text);
+    background-color: transparent;
+}
+
+.text-editor__button:hover, .text-editor__button:active {
+    background-color: var(--primary);
+}
+
+.text-editor__body {
+    border: 1px solid black;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 0px !important;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: none;
 }
