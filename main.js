@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, MenuItem, ipcMain } = require('electron');
 const path = require('path');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -12,8 +12,7 @@ function createMenuWindow() {
         height: 600,
         autoHideMenuBar: true,
         webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false
+            spellcheck: true
         }
     });
 
