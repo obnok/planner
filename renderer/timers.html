@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timers</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="index.js"></script>
+    <script src="renderer.js"></script>
 </head>
 <body>
     <div id="nav-bar"></div>
     <main>
-        <p>Timers here</p>
+        <div class="timer-container">
+            <div class="timer">
+                <h2 class="timer-title">Timer</h2>
+                <input type="text" class="timer-time" id="timer-time" value="0:0">
+                <div class="timer-button-container">
+                    <button onClick="startTimer()" class="timer-button" id="timer-start">Start</button>
+                    <button onClick="startTimer('stop')" class="timer-button" id="timer-stop">Stop</button>
+                    <button onClick="startTimer('reset')" class="timer-button" id="timer-reset">Reset</button>
+                </div>
+            </div>
+            <div class="timer">
+                <h2 class="timer-title">Stopwatch</h2>
+                <input type="text" class="timer-time" id="stopwatch-time" value="0:0">
+                <div class="timer-button-container">
+                    <button onClick="startStopwatch()" class="timer-button" id="stopwatch-start">Start</button>
+                    <button onClick="startStopwatch('stop')" class="timer-button" id="stopwatch-stop">Stop</button>
+                    <button onClick="startStopwatch('reset')" class="timer-button" id="stopwatch-reset">Reset</button>
+                </div>
+            </div>
+            <div class="timer">
+                <h2 class="timer-title">Kanban/Tomato</h2>
+                <input type="text" class="timer-time" id="kanban-time" value="15:0:0">
+                <div class="timer-button-container">
+                    <button onClick="startKanban()" class="timer-button" id="kanban-start">Start</button>
+                    <button onClick="startKanban('stop')" class="timer-button" id="kanban-stop">Stop</button>
+                    <button onClick="startKanban('reset')" class="timer-button" id="kanban-reset">Reset</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasks</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="index.js"></script>
+    <script src="renderer.js"></script>
 </head>
 <body>
     <div id="nav-bar"></div>
     <main>
-        <h1>Header!</h1>
+        <div class="task-container">
+            <div class="task-submit">
+                <input id="taskName" class="task-input" type="text" placeholder="Add Task">
+                <div>
+                    <button onClick="addTask()" class="overlay-button task-submit-button">Submit</button>
+                </div>
+            </div>
+            <ul id="tasks" class="tasks">
+                <div class="task-holder">
+                    <input type="checkbox">
+                    <li class="task-item">Task 1</li>
+                </div>
+                <div class="task-holder">
+                    <input type="checkbox">
+                    <li class="task-item">Task 2</li>
+                </div>
+            </ul>
+        </div>
     </main>
 </body>
 </html>

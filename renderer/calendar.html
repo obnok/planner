@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/index.global.min.js"></script>
+    <script src="renderer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.1/index.global.js"></script>
 </head>
 <body>
     <div id="nav-bar"></div>
+    <div id="overlay">
+        <div class="overlay-menu">
+            <label>Date:</label>
+            <input value="YYYY-MM-DD" type="text" id="eventDate" name="eventDate">
+            <label>Name:</label>
+            <input type="text" id="eventName" name="eventName">
+            <div class="overlay-buttons">
+                <button class="timer-button margin-right" onClick="getEventDetails()">Submit</button>
+                <button class="timer-button margin-left" onClick="overlayOff()">Cancel</button>
+            </div>
+        </div>
+    </div>
     <main>
         <div id="calendar"></div>
     </main>
